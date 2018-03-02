@@ -1,3 +1,9 @@
+# custom exclude basic folder
+.metadata
+.recommenders
+.classpath
+.project
+
 # Compiled class file
 *.class
 
