@@ -12,10 +12,10 @@ public class SingletonClass {
 	}
 	
 	public static SingletonClass getSingletonClass() {
-		if( SINGLETON_CLASS_INSTANCE == null ) {
-			SINGLETON_CLASS_INSTANCE = new SingletonClass();
-			System.out.println("hear ! singletonclass is null");
-		}
+//		if( SINGLETON_CLASS_INSTANCE == null ) {
+//			SINGLETON_CLASS_INSTANCE = new SingletonClass();
+//		}
+//		불필요한 코드 제거 
 		return SINGLETON_CLASS_INSTANCE;
 	}
 	
