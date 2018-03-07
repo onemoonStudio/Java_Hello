@@ -3,6 +3,10 @@
 .recommenders
 .classpath
 .project
+.vscode
+.idea
+LearnProject
+*.iml
 
 # Compiled class file
 *.class
