@@ -1,4 +1,4 @@
-package com.javalec.children;
+package com.javalec.ex_static_children;
 
 import com.javalec.papa.Pouch;;
 

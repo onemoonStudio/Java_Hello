@@ -1,6 +1,6 @@
 package com.javalec.ex_static;
 
-import com.javalec.children.*;
+import com.javalec.ex_static_children.*;
 import com.javalec.papa.Pouch;
 
 public class UseStatic {

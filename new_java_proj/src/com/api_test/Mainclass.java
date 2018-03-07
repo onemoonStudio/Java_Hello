@@ -1,4 +1,4 @@
-package com.javatest.api_test;
+package com.api_test;
 
 import java.util.*;
 
@@ -44,11 +44,11 @@ public class Mainclass {
         System.out.println("Timer API");
 
         Timer timer = new Timer(true);
-        TimerTask tt1 = new TimerTask1();
-        TimerTask tt2 = new TimerTask2();
+//        TimerTask tt1 = new TimerTask1();
+//        TimerTask tt2 = new TimerTask2();
 
-        timer.schedule(tt1,2000);
-        timer.schedule(tt2,5000);
+//        timer.schedule(tt1,2000);
+//        timer.schedule(tt2,5000);
         Thread.sleep(6000);
         // 만약 Thread sleep 이 없다면 timertask가 실행되는 시간을 기다리기 전 실행이 마무리 되기 때문에 종료된다.
         // 따라서 Thread sleep을 걸어줌으로서 timertask가 실행되는것을 기다린 후 나머지 코드를 실행할 수 있게끔 한다.
