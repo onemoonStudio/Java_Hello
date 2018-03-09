@@ -1,4 +1,4 @@
-package com.javalec.ex;
+package com.javalec.basic_ex;
 
 public class ClassTest {
 	private int age;

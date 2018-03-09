@@ -1,4 +1,4 @@
-package com.javalec.papa;
+package com.javalec.ex_static_papa;
 
 public class Pouch {
 	

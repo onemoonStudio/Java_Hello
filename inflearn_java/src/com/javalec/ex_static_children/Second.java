@@ -1,6 +1,6 @@
 package com.javalec.ex_static_children;
 
-import com.javalec.papa.Pouch;;
+import com.javalec.ex_static_papa.Pouch;;
 
 public class Second {
 	

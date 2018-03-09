@@ -1,4 +1,4 @@
-package com.javalec.ex;
+package com.javalec.basic_ex;
 
 import java.util.Scanner;
 //import com.javalec.ex.ClassTest;
