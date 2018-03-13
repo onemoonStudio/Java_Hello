@@ -5,8 +5,14 @@
 .project
 .vscode
 .idea
-LearnProject
 *.iml
+
+# remove other folder
+
+LearnProject
+apache-tomcat-9.0.6
+
+
 
 # Compiled class file
 *.class
