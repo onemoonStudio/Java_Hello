@@ -1,4 +1,4 @@
-# Course_1 알고리즘과 입출력
+# Course_1 : 알고리즘과 입출력
 
 ## A+B_1,2 는 동일한 코드
 
@@ -38,3 +38,23 @@ for(int k=0;k<how_many;k++){
 - isEmpty 를 이용해서 빈줄이 들어왔을 때 실행을 종료한다. 
 - Print_itactly_2 에서는 if문을 제거한다. 
 (빈줄을 입력 종료로 받지 않고 EOF 를 입력 종료로 받는다.)
+
+## Sum_of_Number
+### 숫자의 합
+
+- String으로 받은 값을 어떻게 처리할 것인지가 핵심이다.
+- String 의 각 문자를 char로 받아서 ASCII code 값을 받은 다음에 값을 계산해준다.
+- ( 왜 48을 뺀건지? ) 문제의 기준에서 숫자를 받는다고만 적혀있다. 
+즉 다른 예외상황을 처리할 필요가 없기 때문에 48만 빼주었다. 
+- 만약 알파벳이였으면 대/소문자 처리 또한 생각해야 한다. 
+
+## PrintTenChar
+### 열개씩 끊어 출력하기
+
+- String.substring 메서드를 이용해서 간단하게 풀었다.
+- String.substring 메서드
+    - 인자가 1개일 경우에 해당 인자값을 인덱스로 가지는 곳 부터 끝까지 출력
+    - 인자가 2개일 경우에 (a,b) Str[a] ~ Str[b-1] 출력
+
+##### reference 
+- about substring ==> [devbible](http://devbible.tistory.com/6)
