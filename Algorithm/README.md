@@ -9,6 +9,14 @@
 - [백준 사이트](https://www.acmicpc.net/)에 java 기준으로 정답이 체크된 경우 커밋 합니다.
 - 중간에 잘 풀리지 않은 경우 각 코스별 폴더의 README.md 에서 해당 문제의 그 과정을 기술합니다.
 
+### check Time 
+```
+    long startTime = System.currentTimeMillis();
+    // Run some code;
+    long stopTime = System.currentTimeMillis();
+
+    System.out.println("Elapsed time was " + (stopTime - startTime) + " miliseconds.");
+```
 
 ### Refrence
 - [BeakJoon Algorithm](https://www.acmicpc.net/)
