@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="ServletPost" method="POST">
+		<input type="text" name="realname" size="10" placeholder="Name">
+		<input type="password" name="pwd" size="15" placeholder="Password">
+		<input type="checkbox" name="hobby" value="Book"> Read a Book
+		<input type="checkbox" name="hobby" value="Cook"> Cooking
+		<input type="checkbox" name="hobby" value="Movie"> Watch a Movie
+		<select name="protocol">
+			<option value="ftp" selected="selected">ftp</option>
+			<option value="http">http</option>
+			<option value="tcp/ip">tcp/ip</option>
+			<option value="https">https</option>
+		</select>
+		<button type="submit">POST !!</button> <button type="reset">RESET ? </button>
+		
+	</form>
+</body>
+</html>
