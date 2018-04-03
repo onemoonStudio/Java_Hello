@@ -1,73 +1,112 @@
 package beakjoon.basic.course_2;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Queue {
     public static void main(String[] args) {
+        Queue queue = new Queue();
         Scanner sc = new Scanner(System.in);
-        Queue _this = new Queue();
-        ArrayList<Integer> queue = new ArrayList<Integer>();
-        int how_many = Integer.parseInt(sc.nextLine());
+        int howMany = Integer.parseInt(sc.nextLine());
 
-        for(int i=0; i<how_many;i++){
-            String input_Str = sc.nextLine();
-            String check_str[] = input_Str.split(" ");
-            if ( check_str[0].equals("push")){
-                queue.add(Integer.parseInt(check_str[1]));
-            }else{
-                System.out.println(_this.actionFunc( queue , check_str[0]));
+        for(int i=0;i<howMany;i++) {
+            String inStr = sc.nextLine();
+            String funcName = inStr.split(" ")[0];
+
+
+            switch (funcName) {
+                case "push":
+                    queue.push(Integer.parseInt(inStr.split(" ")[1]));
+                    break;
+                case "pop":
+                    Object popNum = queue.pop();
+                    if (popNum == null) {
+                        System.out.println("-1");
+                    } else {
+                        System.out.println(popNum);
+                    }
+                    break;
+                case "size":
+                    System.out.println(queue.size());
+                    break;
+                case "empty":
+                    System.out.println(queue.empty() ? 1 : 0);
+                    break;
+                case "front":
+                    if (queue.empty()) {
+                        System.out.println("-1");
+                    } else {
+                        System.out.println(queue.front());
+                    }
+                    break;
+                case "back":
+                    if (queue.empty()) {
+                        System.out.println("-1");
+                    } else {
+                        System.out.println(queue.back());
+                    }
+                    break;
+                default:
+                    break;
             }
         }
+
     }
 
-    public int actionFunc(ArrayList<Integer> queue , String func_name){
-        int result = 0;
-        switch (func_name){
-            case "pop" :
-                result = this.pop(queue);
-                break;
-            case "size" :
-                result = this.size(queue);
-                break;
-            case "empty" :
-                result = this.empty(queue);
-                break;
-            case "front" :
-                result = this.front(queue);
-                break;
-            case "back":
-                result = this.back(queue);
-                break;
-            default:
-                break;
+    private Object[] Queue;
+    private int size;
+    private int increments;
+    private int front;
+    private int rear;
+
+    public Queue(){
+        //constructor
+        size = 20;
+        increments = 10;
+        Queue = new Object[size];
+        front = -1;
+        rear = -1;
+    }
+
+    public void push(Object element){
+        if(rear == size - 1){
+            Object[] temp = new Object[size+increments];
+            System.arraycopy(Queue,0,temp,0,size);
+            size = size+increments;
+            Queue = temp;
+
         }
-        return result;
+        Queue[++rear] = element;
     }
 
-    public int pop(ArrayList<Integer> queue){
-        int result = -1;
-        if(queue.size() != 0){ result = queue.get(0); queue.remove(0);}
-        // 주의할것 queue.get(0) != null 방식은 안된다.
-        // 없는것에서 null을 가져오려 했기 때문에
-        return result;
-    }
-    public int size(ArrayList<Integer> queue){
-        return queue.size();
-    }
-    public int empty(ArrayList<Integer> queue){
-        return queue.size() == 0 ? 1:0;
-    }
-    public int front(ArrayList<Integer> queue){
-        int result = -1;
-        if(queue.size() != 0){ result = queue.get(0);}
-        return result;
+    public Object pop(){
+        if(front == rear){
+            return null;
         }
-    public int back(ArrayList<Integer> queue){
-        int result = -1;
-        if(queue.size() != 0){ result = queue.get(queue.size()-1);}
-        return result;
+        return Queue[++front];
     }
 
+    public int size(){
+        return (rear - front);
+    }
+
+    public boolean empty(){
+        return (rear-front) == 0 ? true : false ;
+    }
+
+    public Object front(){
+        if(empty()){
+            return null;
+        }
+        return Queue[front+1];
+    }
+
+    public Object back(){
+        if(empty()){
+            return null;
+        }
+        return Queue[rear];
+    }
 
 }
+
+

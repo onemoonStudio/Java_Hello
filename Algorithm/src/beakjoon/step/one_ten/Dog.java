@@ -1,4 +1,4 @@
-package beakjoon.step.io;
+package beakjoon.step.one_ten;
 
 public class Dog {
     public static void main(String[] args) {

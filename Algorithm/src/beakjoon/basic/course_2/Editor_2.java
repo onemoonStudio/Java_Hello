@@ -11,51 +11,47 @@ public class Editor_2 {
         Editor_2 stackRight = new Editor_2();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder SB = new StringBuilder();
-        try{
-            String inputStr = br.readLine();
-            char[] charArr = inputStr.toCharArray();
-            for(char element : charArr){
-                stackLeft.push(element);
-            }
-
-            int howMany = Integer.parseInt(br.readLine());
-            for(int k=0;k<howMany;k++){
-                String[] orderArr = br.readLine().split(" ");
-                switch (orderArr[0]){
-                    case "L" :
-                        if(stackLeft.size() != 0){
-                            stackRight.push(stackLeft.pop());
-                        }
-                        break;
-                    case "D" :
-                        if(stackRight.size() != 0){
-                            stackLeft.push(stackRight.pop());
-                        }
-                        break;
-                    case "B" :
-                        if(stackLeft.size() != 0){
-                            stackLeft.pop();
-                        }
-                        break;
-                    case "P" :
-                        stackLeft.push(orderArr[1]);
-                        break;
-                }
-            }
-
-            int howManyRight = stackRight.size();
-            for(int i=0;i<howManyRight;i++){
-                SB.append(stackRight.pop());
-            }
-            int howManyLeft = stackLeft.size();
-            for(int k=0;k<howManyLeft;k++){
-                SB.insert(0,stackLeft.pop());
-            }
-            System.out.println(SB.toString());
-
-        }catch (Exception e){
-            e.getStackTrace();
+        String inputStr = br.readLine();
+        char[] charArr = inputStr.toCharArray();
+        for(char element : charArr){
+            stackLeft.push(element);
         }
+
+        int howMany = Integer.parseInt(br.readLine());
+        for(int k=0;k<howMany;k++){
+            String[] orderArr = br.readLine().split(" ");
+            switch (orderArr[0]){
+                case "L" :
+                    if(stackLeft.size() != 0){
+                        stackRight.push(stackLeft.pop());
+                    }
+                    break;
+                case "D" :
+                    if(stackRight.size() != 0){
+                        stackLeft.push(stackRight.pop());
+                    }
+                    break;
+                case "B" :
+                    if(stackLeft.size() != 0){
+                        stackLeft.pop();
+                    }
+                    break;
+                case "P" :
+                    stackLeft.push(orderArr[1]);
+                    break;
+            }
+        }
+
+        int howManyRight = stackRight.size();
+        for(int i=0;i<howManyRight;i++){
+            SB.append(stackRight.pop());
+        }
+        int howManyLeft = stackLeft.size();
+        for(int k=0;k<howManyLeft;k++){
+            SB.insert(0,stackLeft.pop());
+        }
+        System.out.println(SB.toString());
+
     }
 
 

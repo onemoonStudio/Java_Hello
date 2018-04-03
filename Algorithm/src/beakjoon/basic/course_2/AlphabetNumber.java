@@ -12,7 +12,8 @@ public class AlphabetNumber {
 
         for(int ch : checkArr){
             // 캐스팅 된 char
-            thisObj.alphabetArr[ch-97]++;
+//            thisObj.alphabetArr[ch-97]++;
+            thisObj.alphabetArr[ch-'a']++;
         }
 
         for(int arrayValue : thisObj.alphabetArr){

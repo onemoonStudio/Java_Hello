@@ -2,12 +2,15 @@ package beakjoon.basic.course_2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class FourNumber extends Stack {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+//        Queue hello = new ArrayList();
+        ArrayList hello = new ArrayList();
         FourNumber stackOne = new FourNumber();
         FourNumber stackTwo = new FourNumber();
 

@@ -1,4 +1,4 @@
-package beakjoon.step.io;
+package beakjoon.step.one_ten;
 
 import java.util.Scanner;
 
