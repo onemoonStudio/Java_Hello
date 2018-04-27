@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="student1" class="javalec.di_ex.Student">
+		<constructor-arg>
+			<value>java</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>15</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="student2" class="javalec.di_ex.Student">
+		<constructor-arg value="javascript"/>
+		<constructor-arg value="5"/>
+	</bean>
+	
+	<bean id="studentInfo" class="javalec.di_ex.StudentInfo">
+		<constructor-arg>
+			<ref bean="student2"/>
+		</constructor-arg>
+	</bean>
+	
+
+</beans>

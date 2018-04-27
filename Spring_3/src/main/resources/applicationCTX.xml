@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="calculator" class="javalec.di_ex.Calculator"/>
+
+<bean id="myCalculator" class="javalec.di_ex.MyCalculator">
+	<property name="calculator">
+		<ref bean="calculator"></ref>
+	</property>
+	<property name="first" value="10"></property>
+	<property name="second" value="5"></property>
+	
+</bean>
+
+
+</beans>
