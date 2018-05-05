@@ -1,6 +1,13 @@
 package javalec.di_ex;
 
-public class Student {
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+//public class Student implements InitializingBean,DisposableBean{
+public class Student{
 
 	private String name;
 	private int age;
@@ -35,6 +42,32 @@ public class Student {
 		this.hobbys = hobbys;
 	}
 
+//	@Override
+//	public void afterPropertiesSet() throws Exception {
+//		// TODO Auto-generated method stub
+//		// right after bean has been created
+//		System.out.println("bean is created");
+//		
+//	}
+//
+//	@Override
+//	public void destroy() throws Exception {
+//		// TODO Auto-generated method stub
+//		// when bean is destroyed
+//		System.out.println("bean is destroyed");
+//		
+//	}
+
+	@PostConstruct
+	public void initMethod() {
+		System.out.println("init");
+	}
+	
+	@PreDestroy
+	public void destroyMethod() {
+		System.out.println("destroy");
+	}
+	
 	
 
 }

@@ -35,6 +35,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- AOP -->
+		<dependency>
+			<groupId>org.aspect</groupId>
+			<artifactId>aspWeaver</artifactId>
+			<version>1.74</version>
+		</dependency>
 	</dependencies>
 
 	<build>
