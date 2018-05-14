@@ -25,6 +25,7 @@
 		<!-- Setting view folder  -->
 	
 	<context:component-scan base-package="com.javalec.spring_ex_proj" />
+	<context:component-scan base-package="com.javalec.spring_ex_proj.stdVal" />
 		<!-- Controller Scan! -->
 	
 	

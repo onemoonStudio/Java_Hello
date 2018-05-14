@@ -7,7 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Test View page</h1>
-	<h3>${info}</h3>
+	
+	name : ${minfo.name} <br/>
+	id : ${minfo.id} <br/>
+	pw : ${minfo.pw} <br/>
+	<!-- not using all Spelling in Class 
+	we can adjust class mapping name with @ModelAttribute -->
+	
+	
+	
 </body>
 </html>

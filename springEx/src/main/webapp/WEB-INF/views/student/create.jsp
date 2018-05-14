@@ -7,7 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Test View page</h1>
-	<h3>${info}</h3>
+
+<%
+	String context = request.getContextPath();
+%>
+
+<form action="<%= context %>/student/create" method="POST">
+<input type="text" name="name" value="${name}">
+<input type="number" name="age" value="${age}">
+<input type="submit" value="create!">
+</form>
+
 </body>
 </html>

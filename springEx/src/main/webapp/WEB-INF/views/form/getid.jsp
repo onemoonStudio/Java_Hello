@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Test View page</h1>
-	<h3>${info}</h3>
+
+<h3> id is ${id} </h3> 
+
 </body>
 </html>

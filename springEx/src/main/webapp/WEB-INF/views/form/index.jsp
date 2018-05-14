@@ -7,7 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Test View page</h1>
-	<h3>${info}</h3>
+
+<form action="formtest" method=GET >
+<!-- 
+remind that out site localhost is not localhost:3000
+it's localhost:3000/spring_ex_proj
+so don't using '/formtest' for use it gracefully 
+ -->
+	text your id <input type="text" name="id"> <br/>
+	<input type="submit" value="전송" >
+</form>
+
 </body>
 </html>

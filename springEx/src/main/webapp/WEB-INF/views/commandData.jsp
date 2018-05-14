@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Test View page</h1>
-	<h3>${info}</h3>
+<p>name is ${member.name}</p>
+<p>id is ${member.id}</p>
+<p>pw is ${member.pw}</p>
+
 </body>
 </html>
