@@ -11,29 +11,60 @@ public class QuickSort {
         }
     }
 
-    public static int partition(int[] arr , int left , int right){
+    public static int partition(int A[],int p,int r){
+        int i=p-1,j=p-1;
+        int temp;
+        int pivot = A[r];
 
-        int pivot = arr[(left+right)/2];
-        while (left<right){
-            while(arr[left] < pivot && left < right) left++;
-            while(arr[right] > pivot && left < right) right--;
-
-            if (left < right) {
-                int temp = arr[left];
-                arr[left] = arr[right];
-                arr[right] = temp;
-            }
+        while(j < r){
+            if(A[j+1] < pivot){
+                temp = A[++i];
+                A[i] = A[++j];
+                A[j] = temp;
+            }else j++;
 
         }
-        return left;
+
+        temp = A[++i];
+        A[i] = A[r];
+        A[r] = temp;
+
+        return i;
+
     }
 
-    public static void quickSort(int[] arr,int left,int right){
-        if(left<right){
-            int newPivot = partition(arr,left,right);
-            quickSort(arr,left,newPivot-1);
-            quickSort(arr,newPivot+1,right);
+    public static void quickSort(int A[],int p,int r){
+        if(p<r){
+            int q = partition(A,p,r);
+            quickSort(A,p,q-1);
+            quickSort(A,q+1,r);
         }
-
     }
+
 }
+
+//    public static int partition(int[] arr , int left , int right){
+//
+//        int pivot = arr[(left+right)/2];
+//        while (left<right){
+//            while(arr[left] < pivot && left < right) left++;
+//            while(arr[right] > pivot && left < right) right--;
+//
+//            if (left < right) {
+//                int temp = arr[left];
+//                arr[left] = arr[right];
+//                arr[right] = temp;
+//            }
+//
+//        }
+//        return left;
+//    }
+//
+//    public static void quickSort(int[] arr,int left,int right){
+//        if(left<right){
+//            int newPivot = partition(arr,left,right);
+//            quickSort(arr,left,newPivot-1);
+//            quickSort(arr,newPivot+1,right);
+//        }
+//
+//    }

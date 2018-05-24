@@ -1,11 +1,14 @@
 package beakjoon.step.one_ten;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class P10989_CountingSort {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
         int howMany = Integer.parseInt(br.readLine());
         int inputArr[] = new int[howMany];
         int resultArr[] = new int[howMany];
@@ -19,9 +22,10 @@ public class P10989_CountingSort {
         int countingArr[] = new int[max+1];
         counting(inputArr,countingArr);
         countingSort(inputArr,countingArr,resultArr);
-        for(int el : resultArr){
-            System.out.println( el );
-        }
+        for(int el : resultArr)
+            writer.write(el+"\n");
+
+        writer.flush();
     }
 
     public static void counting(int arr[],int counting[]){
